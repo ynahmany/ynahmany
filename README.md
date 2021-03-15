@@ -42,7 +42,13 @@
 <div>
 
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=ynahmany&show_icons=true&theme=gotham" alt="ynahmany" />
+<p align="center">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=ynahmany&layout=compact&theme=material-palenight" />
+</p>
 
+<p align="center">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=ynahmany&repo=github-readme-stats&theme=material-palenight" />
+</p>    
   </div>
 
 
