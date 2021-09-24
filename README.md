@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I am a Full-stack technical lead, passionate about a client, testing, and infrastructure development.
+I am a software architect, passionate about a client, testing, and infrastructure development.
 
 ### Languages and Tools:
 
