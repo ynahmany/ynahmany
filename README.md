@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I am a software architect, passionate about a client, testing, and infrastructure development.
+I am a software engineer.
 
 ### Languages and Tools:
 
