@@ -40,7 +40,7 @@ CONFIG = {
         ("", [
             ("Languages.Programming", "TypeScript, JavaScript, Python"),
             ("Languages.Computer", "SQL, GraphQL, YAML, Markdown"),
-            ("Languages.Real", "Hebrew, English"),
+            ("Languages.Real", "Hebrew, English, Spanish"),
         ]),
         ("", [
             ("Stack.Cloud", "AWS, Node.js, LoopBack"),
@@ -49,9 +49,8 @@ CONFIG = {
             ("Interests.Org", "Engineering Process & Scale"),
         ]),
         ("Contact", [
-            ("Email.Work", "you@pruvo.com"),
             ("LinkedIn", "ynahmany"),
-            ("Web", "pruvoai.com"),
+            ("Web", "pruvo.com"),
         ]),
     ],
     "line_width": 60,  # characters per info line (dots fill the gap)
