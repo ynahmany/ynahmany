@@ -1,0 +1,284 @@
+{
+ "BrainBackup/bb8": {
+  "add": 264626,
+  "commits": 588,
+  "del": 174964,
+  "mine": 417
+ },
+ "BrainBackup/platform": {
+  "add": 249,
+  "commits": 10,
+  "del": 17,
+  "mine": 9
+ },
+ "BrainBackup/research": {
+  "add": 19,
+  "commits": 8,
+  "del": 1,
+  "mine": 5
+ },
+ "MrChase/Vendor-Console": {
+  "add": 0,
+  "commits": 564,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/apiDocs": {
+  "add": 0,
+  "commits": 565,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/aws-cloudwatch-log-minder": {
+  "add": 0,
+  "commits": 35,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/busywait.js": {
+  "add": 0,
+  "commits": 76,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/cordova-network-interceptor": {
+  "add": 0,
+  "commits": 4,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/cordova-plugin-inappbrowser": {
+  "add": 0,
+  "commits": 557,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/cordova-plugin-shortcuts-android": {
+  "add": 0,
+  "commits": 11,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/countryIpSpoofer": {
+  "add": 0,
+  "commits": 4,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/cronicle-client": {
+  "add": 0,
+  "commits": 27,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/datejs": {
+  "add": 0,
+  "commits": 368,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/documentation": {
+  "add": 0,
+  "commits": 2933,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/jsdom": {
+  "add": 0,
+  "commits": 3067,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/jsesc": {
+  "add": 0,
+  "commits": 116,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/json-expression-eval": {
+  "add": 0,
+  "commits": 87,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/log4js-cloudwatch-appender": {
+  "add": 0,
+  "commits": 21,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-component-flatstorage": {
+  "add": 0,
+  "commits": 13,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-connector": {
+  "add": 0,
+  "commits": 1024,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-connector-mssql-old": {
+  "add": 0,
+  "commits": 293,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-connector-old": {
+  "add": 0,
+  "commits": 225,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-datasource-juggler-old": {
+  "add": 0,
+  "commits": 3098,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/loopback-getting-started": {
+  "add": 0,
+  "commits": 27,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/mautic": {
+  "add": 0,
+  "commits": 24296,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/node-upgrade-checker": {
+  "add": 0,
+  "commits": 158,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/nodecache": {
+  "add": 0,
+  "commits": 200,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/phonegap-plugin-push": {
+  "add": 0,
+  "commits": 933,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/price-extractor": {
+  "add": 0,
+  "commits": 25,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/promise-blocking-queue": {
+  "add": 0,
+  "commits": 17,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/squiss-ts": {
+  "add": 0,
+  "commits": 306,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/vscodeYoutrackExtension": {
+  "add": 0,
+  "commits": 1,
+  "del": 0,
+  "mine": 0
+ },
+ "PruvoNet/yeoman-automation-adapter": {
+  "add": 0,
+  "commits": 9,
+  "del": 0,
+  "mine": 0
+ },
+ "agoldis/contribute.md": {
+  "add": 0,
+  "commits": 1,
+  "del": 0,
+  "mine": 0
+ },
+ "tsvikar/greenbit-client": {
+  "add": 0,
+  "commits": 9,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/grpc-node": {
+  "add": 0,
+  "commits": 2718,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/js-debugging-tutorial": {
+  "add": 207,
+  "commits": 55,
+  "del": 89,
+  "mine": 27
+ },
+ "ynahmany/node-microservice": {
+  "add": 8043,
+  "commits": 25,
+  "del": 248,
+  "mine": 13
+ },
+ "ynahmany/nodebestpractices": {
+  "add": 0,
+  "commits": 724,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/pgx": {
+  "add": 0,
+  "commits": 1297,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/react": {
+  "add": 0,
+  "commits": 11129,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/react-diagrams": {
+  "add": 0,
+  "commits": 695,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/react-proxy": {
+  "add": 0,
+  "commits": 211,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/react-timeseries-charts": {
+  "add": 0,
+  "commits": 590,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/router-sniffer": {
+  "add": 24,
+  "commits": 6,
+  "del": 2,
+  "mine": 4
+ },
+ "ynahmany/staff": {
+  "add": 0,
+  "commits": 1,
+  "del": 0,
+  "mine": 0
+ },
+ "ynahmany/togetherjs": {
+  "add": 0,
+  "commits": 2522,
+  "del": 0,
+  "mine": 0
+ }
+}

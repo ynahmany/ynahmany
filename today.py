@@ -76,20 +76,28 @@ API_CALLS = 0
 
 
 # ─────────────────────────── GitHub GraphQL ────────────────────────────
-def gql(query, variables=None, retries=3):
+def gql(query, variables=None, retries=5):
     global API_CALLS
+    last = None
     for attempt in range(retries):
         API_CALLS += 1
-        r = requests.post("https://api.github.com/graphql",
-                          json={"query": query, "variables": variables or {}},
-                          headers=HEADERS, timeout=60)
+        try:
+            r = requests.post("https://api.github.com/graphql",
+                              json={"query": query, "variables": variables or {}},
+                              headers=HEADERS, timeout=120)
+        except requests.exceptions.RequestException as e:
+            # Read/connect timeouts are routine on a long scan: retry, don't abort.
+            last = f"network error: {e}"
+            time.sleep(5 * (attempt + 1))
+            continue
         if r.status_code == 200 and "errors" not in r.json():
             return r.json()["data"]
+        last = f"{r.status_code}: {r.text[:300]}"
         if r.status_code in (502, 503, 504) or r.status_code == 403:
             time.sleep(5 * (attempt + 1))
             continue
-        raise RuntimeError(f"GraphQL error {r.status_code}: {r.text[:500]}")
-    raise RuntimeError(f"GraphQL failed after {retries} attempts: {r.status_code} {r.text[:300]}")
+        raise RuntimeError(f"GraphQL error {last}")
+    raise RuntimeError(f"GraphQL failed after {retries} attempts: {last}")
 
 
 def get_user():
@@ -167,20 +175,28 @@ def loc_stats(repos, user_id):
     except (FileNotFoundError, json.JSONDecodeError):
         cache = {}
     new_cache = {}
-    for r in repos:
+
+    def flush():
+        """Persist after every repo so an interrupted scan resumes instead of restarting."""
+        with open(CACHE_FILE, "w") as f:
+            json.dump(new_cache, f, indent=1, sort_keys=True)
+
+    for i, r in enumerate(repos, 1):
         c = cache.get(r["name"])
         if not c or c["commits"] != r["commits"]:
+            print(f"  [{i}/{len(repos)}] {r['name']} ({r['commits']} commits)", file=sys.stderr, flush=True)
             try:
                 a, d, m = repo_loc(r["name"], user_id)
-            except RuntimeError as e:
-                print(f"  ! skipped {r['name']}: {e}", file=sys.stderr)
+            except Exception as e:
+                print(f"  ! skipped {r['name']}: {e}", file=sys.stderr, flush=True)
                 if c:
                     new_cache[r["name"]] = c
+                    flush()
                 continue
             c = {"commits": r["commits"], "add": a, "del": d, "mine": m}
         new_cache[r["name"]] = c
-    with open(CACHE_FILE, "w") as f:
-        json.dump(new_cache, f, indent=1, sort_keys=True)
+        flush()
+    flush()
     add = sum(c["add"] for c in new_cache.values())
     dele = sum(c["del"] for c in new_cache.values())
     return add, dele
