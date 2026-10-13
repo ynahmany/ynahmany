@@ -1,0 +1,39 @@
+name: Update profile card
+
+on:
+  schedule:
+    - cron: "0 4 * * *"     # daily at 04:00 UTC
+  workflow_dispatch:         # manual "Run workflow" button
+  push:
+    branches: [main]
+    paths: ["today.py", "ascii_dark.txt", "ascii_light.txt", ".github/workflows/build.yaml"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install requests python-dateutil
+
+      - name: Render SVGs
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USER_NAME: ynahmany
+        run: python today.py
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dark_mode.svg light_mode.svg cache/
+          git diff --cached --quiet || git commit -m "Update profile card"
+          git push
